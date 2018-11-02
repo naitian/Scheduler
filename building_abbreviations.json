@@ -1,0 +1,514 @@
+{
+  "A&AB": {
+    "name": "Art & Architecture Building",
+    "campus": "North Campus"
+  },
+  "AH": {
+    "name": "Angell Hall",
+    "campus": "Central Campus"
+  },
+  "AL": {
+    "name": "Walter E. Lay Automotive Lab",
+    "campus": "North Campus"
+  },
+  "ALH": {
+    "name": "Alice Lloyd Hall",
+    "campus": "The Hill Area"
+  },
+  "ARGUS2": {
+    "name": "Argus Building II, Television Center, 408 S. Fourth Street",
+    "campus": "Ann Arbor, Off Campus"
+  },
+  "ARGUS3": {
+    "name": "Argus Building III, 416 S. Fourth Street",
+    "campus": "Ann Arbor, Off Campus"
+  },
+  "ARR": {
+    "name": "Location to be Arranged",
+    "campus": "Contact Dept or Instructor"
+  },
+  "BAM HALL": {
+    "name": "Blanch Anderson Moore Hall, School of Music",
+    "campus": "North Campus"
+  },
+  "BELL POOL": {
+    "name": "Margaret Bell Pool, Central Campus Recreation Building",
+    "campus": "The Hill Area"
+  },
+  "BEYST": {
+    "name": "Bob and Betty Beyster Building (formerly CSE)",
+    "campus": "North Campus"
+  },
+  "BIOL STAT": {
+    "name": "Biological Station",
+    "campus": "Pellston, Michigan"
+  },
+  "BLAU": {
+    "name": "Jeff T Blau Hall",
+    "campus": "Central Campus"
+  },
+  "BMT": {
+    "name": "Burton Memorial Tower",
+    "campus": "Central Campus"
+  },
+  "BOT GARD": {
+    "name": "Matthaei Botanical Gardens, Dixboro Road",
+    "campus": "Ann Arbor, Off Campus"
+  },
+  "BSB": {
+    "name": "Biological Science Building",
+    "campus": "Central Campus"
+  },
+  "BSRB": {
+    "name": "Biomedical Science Research Building",
+    "campus": "Medical Campus"
+  },
+  "BURS": {
+    "name": "Bursley Hall",
+    "campus": "North Campus"
+  },
+  "BUS": {
+    "name": "Business Administration",
+    "campus": "Central Campus"
+  },
+  "CAMP DAVIS": {
+    "name": "Camp Davis",
+    "campus": "Jackson Hole, Wyoming"
+  },
+  "CCRB": {
+    "name": "Central Campus Recreation Building",
+    "campus": "The Hill Area"
+  },
+  "CHEM": {
+    "name": "Chemistry Building",
+    "campus": "Central Campus"
+  },
+  "CHRYS": {
+    "name": "Chrysler Center",
+    "campus": "North Campus"
+  },
+  "COMM PARK": {
+    "name": "Commerce Park",
+    "campus": "Dearborn, Michigan"
+  },
+  "COOL": {
+    "name": "Cooley Building",
+    "campus": "North Campus"
+  },
+  "COUZENS": {
+    "name": "Couzens Hall",
+    "campus": "The Hill Area"
+  },
+  "CPH": {
+    "name": "Children's Psychiatric Hospital",
+    "campus": "Medical Campus"
+  },
+  "CRISLER": {
+    "name": "Crisler Center",
+    "campus": "South Campus"
+  },
+  "CCSB": {
+    "name": "Campus Safety Services Building, 1239 Kipke Dr.",
+    "campus": "South Campus"
+  },
+  "DANA": {
+    "name": "Dana Building (School of Natural Resources & Environment)",
+    "campus": "Central Campus"
+  },
+  "DANCE": {
+    "name": "Dance Building, 1310 N University Court",
+    "campus": "The Hill Area"
+  },
+  "DC": {
+    "name": "Duderstadt Center",
+    "campus": "North Campus"
+  },
+  "DENT": {
+    "name": "Dental Building",
+    "campus": "Central Campus"
+  },
+  "DOW": {
+    "name": "Dow Engineering Building",
+    "campus": "North Campus"
+  },
+  "E-BUS": {
+    "name": "Executive Education",
+    "campus": "Central Campus"
+  },
+  "EECS": {
+    "name": "Electrical Engineering and Computer Science Building",
+    "campus": "North Campus"
+  },
+  "EH": {
+    "name": "East Hall",
+    "campus": "Central Campus"
+  },
+  "EQ": {
+    "name": "East Quadrangle",
+    "campus": "Central Campus"
+  },
+  "ERB1": {
+    "name": "Engineering Research Building 1",
+    "campus": "North Campus"
+  },
+  "ERB2": {
+    "name": "Engineering Research Building 2",
+    "campus": "North Campus"
+  },
+  "EWRE": {
+    "name": "Environmental & Water Resources Engineering Building",
+    "campus": "North Campus"
+  },
+  "FA CAMP": {
+    "name": "Fresh Air Camp, Pinckney",
+    "campus": "Pinckney, Michigan"
+  },
+  "FORD LIB": {
+    "name": "Ford Library",
+    "campus": "North Campus"
+  },
+  "FXB": {
+    "name": "Francois-Xavier Bagnoud Building",
+    "campus": "North Campus"
+  },
+  "GFL": {
+    "name": "Gorguze Family Laboratory (formerly EPB)",
+    "campus": "North Campus"
+  },
+  "GGBL": {
+    "name": "G. G. Brown Laboratory",
+    "campus": "North Campus"
+  },
+  "GLIBN": {
+    "name": "Harlan Hatcher Graduate Library, North",
+    "campus": "Central Campus"
+  },
+  "HH": {
+    "name": "Haven Hall",
+    "campus": "Central Campus"
+  },
+  "HUTCH": {
+    "name": "Hutchins Hall",
+    "campus": "Central Campus"
+  },
+  "IM POOL": {
+    "name": "Intramural Building",
+    "campus": "South Campus"
+  },
+  "IOE": {
+    "name": "Industrial and Operations Engineering Building",
+    "campus": "North Campus"
+  },
+  "ISR": {
+    "name": "Institute for Social Research",
+    "campus": "Central Campus"
+  },
+  "K-BUS": {
+    "name": "Kresge Library",
+    "campus": "Central Campus"
+  },
+  "KEC": {
+    "name": "Kellogg Eye Center",
+    "campus": "Medical Campus"
+  },
+  "KEENE THTR EQ": {
+    "name": "Keene Theater, Residential College, East Quadrangle",
+    "campus": "Central Campus"
+  },
+  "KELSEY": {
+    "name": "Kelsey Museum of Archaeology",
+    "campus": "Central Campus"
+  },
+  "KHRI": {
+    "name": "Kresge Hearing Research Institute",
+    "campus": "Medical Campus"
+  },
+  "LANE": {
+    "name": "Lane Hall",
+    "campus": "Central Campus"
+  },
+  "LBME": {
+    "name": "Lurie Biomedical Engineering Building",
+    "campus": "North Campus"
+  },
+  "LEAG": {
+    "name": "Michigan League",
+    "campus": "Central Campus"
+  },
+  "LEC": {
+    "name": "Lurie Engineering Center",
+    "campus": "North Campus"
+  },
+  "LLIB": {
+    "name": "Law Library",
+    "campus": "Central Campus"
+  },
+  "LORCH": {
+    "name": "Lorch Hall",
+    "campus": "Central Campus"
+  },
+  "LSA": {
+    "name": "Literature, Science, and the Arts Building",
+    "campus": "Central Campus"
+  },
+  "LSI": {
+    "name": "Life Sciences Institute",
+    "campus": "Central Campus"
+  },
+  "LSSH": {
+    "name": "Law School South Hall",
+    "campus": "Central Campus"
+  },
+  "MARKLEY": {
+    "name": "Mary Markley Hall",
+    "campus": "The Hill Area"
+  },
+  "MAX KADE": {
+    "name": "Max Kade House, 627 Oxford Street",
+    "campus": "Ann Arbor, Off Campus"
+  },
+  "MH": {
+    "name": "Mason Hall",
+    "campus": "Central Campus"
+  },
+  "MHRI": {
+    "name": "Mental Health Research Institute",
+    "campus": "Medical Campus"
+  },
+  "MLB": {
+    "name": "Modern Languages Building",
+    "campus": "Central Campus"
+  },
+  "MONREOCTY HD": {
+    "name": "Monroe County Health Department",
+    "campus": "Monroe, Michigan"
+  },
+  "MOSHER": {
+    "name": "Mosher Jordan Hall",
+    "campus": "The Hill Area"
+  },
+  "MOTT": {
+    "name": "C. S. Mott Children's Hospital",
+    "campus": "Medical Campus"
+  },
+  "MSC1": {
+    "name": "Medical Science, Building I",
+    "campus": "Medical Campus"
+  },
+  "MSC2": {
+    "name": "Medical Science, Building II",
+    "campus": "Medical Campus"
+  },
+  "MSRB3": {
+    "name": "Medical Science Research, Building III",
+    "campus": "Medical Campus"
+  },
+  "NAME": {
+    "name": "Naval Architecture and Marine Engineering Building",
+    "campus": "North Campus"
+  },
+  "NCRB": {
+    "name": "North Campus Recreation Building",
+    "campus": "North Campus"
+  },
+  "NCRC": {
+    "name": "North Campus Research Complex",
+    "campus": "North Campus"
+  },
+  "NIB": {
+    "name": "300 North Ingalls Building",
+    "campus": "Medical Campus"
+  },
+  "400NI": {
+    "name": "400 North Ingalls Building (old School of Nursing Building)",
+    "campus": "Medical Campus"
+  },
+  "NORTHVILLEPH": {
+    "name": "Northville State Hospital",
+    "campus": "Northville, Michigan"
+  },
+  "NQ": {
+    "name": "North Quad",
+    "campus": "Central Campus"
+  },
+  "NS": {
+    "name": "Edward Henry Kraus Natural Science Building",
+    "campus": "Central Campus"
+  },
+  "NUB": {
+    "name": "1100 North University Building (formerly CCL)",
+    "campus": "Central Campus"
+  },
+  "OBL": {
+    "name": "Observatory Lodge, 1402 Washington Heights",
+    "campus": "The Hill Area"
+  },
+  "PALM": {
+    "name": "Palmer Commons",
+    "campus": "Central Campus"
+  },
+  "PHOENIXLAB": {
+    "name": "Phoenix Memorial Laboratory",
+    "campus": "North Campus"
+  },
+  "PIER": {
+    "name": "Pierpont Commons",
+    "campus": "North Campus"
+  },
+  "POWER CTR": {
+    "name": "Power Center for the Performing Arts",
+    "campus": "Central Campus"
+  },
+  "RACK": {
+    "name": "Horace H. Rackham, School of Graduate Studies",
+    "campus": "Central Campus"
+  },
+  "RAND": {
+    "name": "Randall Laboratory",
+    "campus": "Central Campus"
+  },
+  "R-BUS": {
+    "name": "Ross School of Business Building",
+    "campus": "Central Campus"
+  },
+  "REVELLI": {
+    "name": "William D. Revelli Hall",
+    "campus": "South Campus"
+  },
+  "ROSS AC": {
+    "name": "Stephen M. Ross Academic Center",
+    "campus": "South Campus"
+  },
+  "RUTHVEN": {
+    "name": "A. G. Ruthven Museums Building",
+    "campus": "Central Campus"
+  },
+  "SCHEM": {
+    "name": "Glenn E. Schembechler Hall",
+    "campus": "South Campus"
+  },
+  "SEB": {
+    "name": "School of Education Building",
+    "campus": "Central Campus"
+  },
+  "SHAPIRO": {
+    "name": "Shapiro Undergraduate Library",
+    "campus": "Central Campus"
+  },
+  "SM": {
+    "name": "Earl V. Moore Building, School of Music",
+    "campus": "North Campus"
+  },
+  "SNB": {
+    "name": "School of Nursing Building",
+    "campus": "Medical Campus"
+  },
+  "SPH1": {
+    "name": "Henry Vaughan Building, School of Public Health I",
+    "campus": "The Hill Area"
+  },
+  "SPH2": {
+    "name": "Thomas Francis, Jr Building, School of Public Health II",
+    "campus": "The Hill Area"
+  },
+  "SRB": {
+    "name": "Space Research Building",
+    "campus": "North Campus"
+  },
+  "SSWB": {
+    "name": "School of Social Work Building",
+    "campus": "Central Campus"
+  },
+  "STAMPS": {
+    "name": "Stamps Auditorium",
+    "campus": "North Campus"
+  },
+  "STB": {
+    "name": "202 South Thayer Building",
+    "campus": "Central Campus"
+  },
+  "STJOSEPH HOSP": {
+    "name": "St. Joseph Mercy Hospital",
+    "campus": "Ann Arbor, Off Campus"
+  },
+  "STOCKWELL": {
+    "name": "Stockwell Hall",
+    "campus": "The Hill Area"
+  },
+  "STRNS": {
+    "name": "Sterns Building",
+    "campus": "North Campus"
+  },
+  "T&TB": {
+    "name": "Track & Tennis Building",
+    "campus": "Ann Arbor, Off Campus"
+  },
+  "TAP": {
+    "name": "Tappan Hall",
+    "campus": "Central Campus"
+  },
+  "TAUBL": {
+    "name": "Learning Resource Center, Taubman Medical Library",
+    "campus": "Medical Campus"
+  },
+  "TISCH": {
+    "name": "Tisch Hall",
+    "campus": "Central Campus"
+  },
+  "UM HOSP": {
+    "name": "University Hospital",
+    "campus": "Medical Campus"
+  },
+  "UMMA": {
+    "name": "University of Michigan Museum of Art (Alumni Memorial Hall)",
+    "campus": "Central Campus"
+  },
+  "UNION": {
+    "name": "Michigan Union",
+    "campus": "Central Campus"
+  },
+  "USB": {
+    "name": "Undergraduate Science Building",
+    "campus": "Central Campus"
+  },
+  "UTOWER": {
+    "name": "University Towers, 1225 S. University",
+    "campus": "Central Campus"
+  },
+  "VETERANSHOSP": {
+    "name": "Veterans Administration Hospital",
+    "campus": "Ann Arbor, Off Campus"
+  },
+  "WASHCTY HD": {
+    "name": "Washtenaw County Health Department",
+    "campus": "Ann Arbor, Off Campus"
+  },
+  "W-BUS": {
+    "name": "Wyly Hall",
+    "campus": "Central Campus"
+  },
+  "WDC": {
+    "name": "Charles R. Walgreen, Jr. Drama Center",
+    "campus": "North Campus"
+  },
+  "WEILL": {
+    "name": "Joan and Sanford Weill Hall",
+    "campus": "Central Campus"
+  },
+  "WEIS": {
+    "name": "Weiser Hall",
+    "campus": "Central Campus"
+  },
+  "WH": {
+    "name": "West Hall",
+    "campus": "Central Campus"
+  },
+  "WOMEN'S HOSP": {
+    "name": "Women's Hospital",
+    "campus": "Medical Campus"
+  },
+  "WQ": {
+    "name": "West Quad",
+    "campus": "Central Campus"
+  }
+}
