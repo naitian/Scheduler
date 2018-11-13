@@ -77,27 +77,41 @@ def lunch_time(schedule, weight=1):
     tf_sched = get_time_friendly_schedule(schedule)
     score = 0
     for day in tf_sched:
-        for i in range(len(tf_sched[day]) - 1):
+        for i in range(len(tf_sched[day]) - 1, 0, -1):
             if tf_sched[day][i][1] <= 1330 \
                and get_true_time_difference(tf_sched[day][i + 1][0], tf_sched[day][i][1]) >= 30:
-                print(get_true_time_difference(tf_sched[day][i + 1][0], tf_sched[day][i][1]))
                 score += get_true_time_difference(tf_sched[day][i + 1][0], tf_sched[day][i][1])
                 break
-    return (score / 5) * weight
+    return (score) * weight
+
+
+def get_normalized_scores(scores, raw_scores):
+    means = [sum(heuristic_raw) / len(heuristic_raw) for heuristic_raw in raw_scores.values()]
+    return {sid: sum([hs / means[i] for i, hs in enumerate(scores[sid])]) / len(scores[sid]) for sid in scores}
 
 
 heuristics = [
-                # eight_am_classes,
+                eight_am_classes,
                 lunch_time
-             ]  # each heuristic should return a value [0, 1], from worst to best
+             ]
+weights = [1, 1]
 scores = {}
+raw_scores = {}
 for schedule in schedules:
     schedule_id = schedule['id']
     schedule = parse_schedule(schedule['combination'])
     score = 0
-    for heuristic in heuristics:
-        score += heuristic(schedule)
-    scores[schedule_id] = score / len(heuristics)
+    for i, heuristic in enumerate(heuristics):
+        heuristic_score = heuristic(schedule, weights[i])
+        if i in raw_scores:
+            raw_scores[i].append(heuristic_score)
+        else:
+            raw_scores[i] = [heuristic_score]
+        if schedule_id in scores:
+            scores[schedule_id].append(heuristic_score)
+        else:
+            scores[schedule_id] = [heuristic_score]
+scores = get_normalized_scores(scores, raw_scores)
 
 s = [(k, scores[k]) for k in sorted(scores, key=scores.get, reverse=True)]
 [print(schedules[sc[0]], sc[1]) for sc in s[:5]]
