@@ -1,5 +1,8 @@
 import re
 
+from itertools import product
+from datetime import datetime, timedelta
+
 import pandas as pd
 
 
@@ -48,28 +51,90 @@ def course_name_to_tuple(course_name, mapping):
     return course_name, number
 
 
+def get_real_list_of_courses(course_list, mapping, df):
+    """ Returns list of courses with LAB and LEC suffixes
+    """
+    real_course_list = []
+    for course in course_list:
+        components = get_list_of_sections(*course_name_to_tuple(course, mapping), df)['Component'].unique()
+        real_course_list += [course + component for component in components]
+    return real_course_list
+
+
 def get_list_of_sections(subject, nbr, df):
     return df[(df['Subject'] == subject) & (df['Catalog Nbr'] == nbr)]
 
 
-def get_section_to_info_map(section_list, df):
+def invert_am_pm(am_pm):
+    return 'PM' if am_pm == 'AM' else 'AM'
+
+
+def get_timedelta(str_time, am_pm):
+    if len(str_time) <= 2:
+        hours = int(str_time)
+        minutes = 0
+    else:
+        hours = int(str_time[:-2])
+        minutes = int(str_time[-2:4]) if str_time[-2:4] else 0
+    hours = hours % 12 + 12 if am_pm == 'PM' else hours
+    return timedelta(hours=hours, minutes=minutes)
+
+
+def get_start_and_end_times(row, day):
+    """ Return tuple of start and end times
+    """
+    raw_time = row['Time']
+    start_end = raw_time[:-2]
+    start, end = start_end.split('-')
+    end_am_pm = raw_time[-2:]
+    start_am_pm = end_am_pm if int(end) % 12 - int(start) % 12 > 0 else invert_am_pm(end_am_pm)
+    start_time = get_timedelta(start, start_am_pm)
+    end_time = get_timedelta(end, end_am_pm)
+    return (start_time, end_time)
+
+
+def get_times(row):
+    """ Returns dict mapping days to tuple of start and end times
+    """
+    days = ['M', 'T', 'W', 'TH', 'F', 'S', 'SU']
+    time = dict()
+    for day in days:
+        time[day] = get_start_and_end_times(row, day) if row[day] else None
+    return time
+
+
+def get_section_to_info_map(course_list, df):
     acronym_map = create_acronym_to_subject_map(df)
-    section_dict = dict()
-    for section in section_list:
-        subject, nbr = course_name_to_tuple(section, acronym_map)
+    course_to_section_map = {course: [] for course in get_real_list_of_courses(course_list,
+                                                                               acronym_map, df)}
+    course_dict = dict()
+    for course in course_list:
+        subject, nbr = course_name_to_tuple(course, acronym_map)
         section_iter = get_list_of_sections(subject, nbr, df).iterrows()
-        i = 0
         for _, row in section_iter:
-            sec = {
+            # I'm going ahead and using nested dicts and all sorts of stuff,
+            # since we'll just do lookups on this dict instead of actually
+            # making copies and passing these around, so performance shouldn't
+            # actually suffer too much.
+            section = {
                 'id': row['Class Nbr'],
-                'catalog_number': row['Catalog Nbr']
+                'catalog_number': row['Catalog Nbr'],
+                'building': row['Location'],
+                'times': get_times(row)
             }
-            print(row['Class Nbr'])
-            i += 1
-        print(i)
+            course_dict[str(section['id'])] = section
+            course_to_section_map[course + row['Component']].append(str(section['id']))
+    return course_to_section_map, course_dict
 
 
 df = pd.read_csv('./WN2019_open.csv')
 df = preprocess(df)
 
-get_section_to_info_map(['EECS281', 'MATH217'], df)
+course_to_section_map, cdict = get_section_to_info_map(['EECS281', 'MATH217', 'ENGR101', 'CHEM125', 'CHEM130'], df)
+
+
+# Let's just do a BFS
+# Backtracking Backpacking
+def bfs(course_to_section_map, cdict):
+    visited = set()
+    pass
