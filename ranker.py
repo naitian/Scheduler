@@ -56,7 +56,7 @@ def get_true_time_difference(a, b):
     return hour_diff * 60 + minute_diff
 
 
-def eight_am_classes(schedule, weight=1):
+def eight_am_classes(schedule):
     """ The fewer 8ams, the better
     """
     earliest = 800  # because CHEM 126, for example, as at 100 smh
@@ -67,10 +67,10 @@ def eight_am_classes(schedule, weight=1):
             continue
         if max(tf_sched[day][0][0], earliest) // 100 != 8:
             score += 1
-    return (score / 5) * weight
+    return (score / 5)
 
 
-def lunch_time(schedule, weight=1):
+def lunch_time(schedule):
     """ Find schedules with at least 30 minutes free at some point between 1200 and 1400
     """
     tf_sched = get_time_friendly_schedule(schedule)
@@ -81,19 +81,19 @@ def lunch_time(schedule, weight=1):
                and get_true_time_difference(tf_sched[day][i + 1][0], tf_sched[day][i][1]) >= 30:
                 score += get_true_time_difference(tf_sched[day][i + 1][0], tf_sched[day][i][1])
                 break
-    return (score) * weight
+    return (score)
 
 
-def get_normalized_scores(scores, raw_scores):
+def get_normalized_scores(scores, raw_scores, weights):
     means = [sum(heuristic_raw) / len(heuristic_raw) for heuristic_raw in raw_scores.values()]
-    return {sid: sum([hs / means[i] for i, hs in enumerate(scores[sid])]) / len(scores[sid]) for sid in scores}
+    return {sid: sum([hs * weights[i] / means[i] for i, hs in enumerate(scores[sid])]) / len(scores[sid]) for sid in scores}
 
 
 heuristics = [
                 eight_am_classes,
                 lunch_time
              ]
-weights = [1, 1]
+weights = [.1, 1]
 scores = {}
 raw_scores = {}
 for schedule in schedules:
@@ -101,7 +101,7 @@ for schedule in schedules:
     schedule = parse_schedule(schedule['combination'])
     score = 0
     for i, heuristic in enumerate(heuristics):
-        heuristic_score = heuristic(schedule, weights[i])
+        heuristic_score = heuristic(schedule)
         if i in raw_scores:
             raw_scores[i].append(heuristic_score)
         else:
@@ -110,7 +110,7 @@ for schedule in schedules:
             scores[schedule_id].append(heuristic_score)
         else:
             scores[schedule_id] = [heuristic_score]
-scores = get_normalized_scores(scores, raw_scores)
+scores = get_normalized_scores(scores, raw_scores, weights)
 
 s = [(k, scores[k]) for k in sorted(scores, key=scores.get, reverse=True)]
 [print(schedules[sc[0]], sc[1]) for sc in s[:5]]
